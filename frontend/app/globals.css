@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased;
+    background-image: radial-gradient(at 50% 0%, rgba(59, 130, 246, 0.15) 0px, transparent 70%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+}
