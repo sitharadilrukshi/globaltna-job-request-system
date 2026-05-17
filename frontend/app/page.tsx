@@ -67,11 +67,17 @@ export default function Home() {
           <div>
             <label className="block text-xs font-medium text-slate-600">Search</label>
             <input
+              list="title-suggestions"
               value={q}
               onChange={(e) => setQ(e.target.value)}
-              placeholder="title or description"
+              placeholder="Search by title..."
               className="mt-1 rounded-md border border-slate-300 bg-white px-3 py-2 text-sm"
             />
+            <datalist id="title-suggestions">
+              {Array.from(new Set(jobs.map((job) => job.title))).map((title) => (
+                <option key={title} value={title} />
+              ))}
+            </datalist>
           </div>
           <button type="submit" className="self-end rounded-md border bg-white px-3 py-2 text-sm hover:bg-slate-100">
             Search

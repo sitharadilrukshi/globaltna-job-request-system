@@ -7,7 +7,7 @@ I've also added a few extra touches like a search feature, custom ICT categories
 ## What it does
 
 - **Manage Requests:** You can create new job requests, view their details, update their information (or just their status), and delete them.
-- **Search & Filter:** Added a search bar on the home page so you can quickly find jobs by title or description. You can also filter them by specific ICT categories.
+- **Search & Filter:** Added a search bar with autocomplete suggestions on the home page so you can quickly find jobs by title or category. You can also filter them by specific ICT categories.
 - **Modern UI:** I used Tailwind CSS to build a clean, responsive interface with a nice blue radial gradient background.
 
 ## The Tech Stack
@@ -105,4 +105,4 @@ If you want to test the backend directly (e.g., using Postman), here are the ava
 **P.A.A.P.G.S.Dilrukshi**  
 University of Ruhuna  
 Bachelor of ICT (Hons)  
-Sri Lanka
+Sri Lanka 

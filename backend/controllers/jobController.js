@@ -16,7 +16,7 @@ const getJobs = async (req, res, next) => {
     if (req.query.q) {
       filter.$or = [
         { title: { $regex: req.query.q, $options: "i" } },
-        { description: { $regex: req.query.q, $options: "i" } },
+        { category: { $regex: req.query.q, $options: "i" } },
       ];
     }
 
