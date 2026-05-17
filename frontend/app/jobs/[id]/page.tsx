@@ -18,6 +18,10 @@ type Job = {
 };
 
 const ictCategories = [
+  "Plumbing",
+  "Electrical",
+  "Painting",
+  "Joinery",
   "Software Engineering",
   "Data Science & Analytics",
   "Cloud Computing",

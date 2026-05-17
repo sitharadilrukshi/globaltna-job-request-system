@@ -78,6 +78,10 @@ export default function NewJobPage() {
               placeholder="Select or type a category"
             />
             <datalist id="category-list">
+              <option value="Plumbing" />
+              <option value="Electrical" />
+              <option value="Painting" />
+              <option value="Joinery" />
               <option value="Web Development" />
               <option value="Mobile App Development" />
               <option value="Software Engineering" />

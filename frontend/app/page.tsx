@@ -54,6 +54,10 @@ export default function Home() {
             placeholder="All Categories"
           />
           <datalist id="category-list">
+            <option value="Plumbing" />
+            <option value="Electrical" />
+            <option value="Painting" />
+            <option value="Joinery" />
             <option value="Web Development" />
             <option value="Mobile App Development" />
             <option value="Software Engineering" />
