@@ -31,7 +31,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-slate-50 text-slate-900">
         <header className="border-b bg-white">
           <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-4 w-full">
-            <Link href="/" className="text-lg font-semibold">Service Request Board</Link>
+            <Link href="/" className="text-2xl font-bold tracking-tight text-slate-800">Service Request Board</Link>
             <Link
               href="/new"
               className="rounded-md bg-slate-900 px-3 py-1.5 text-sm font-medium text-white hover:bg-slate-700"

@@ -1,111 +1,108 @@
 # GlobalTNA Service Board
 
-A full-stack job request management system built for the GlobalTNA Full-Stack Developer Internship Assessment. Recently upgraded with a refined UI/UX, advanced search, and dynamic ICT categorization.
+Hi there! 👋 This is my submission for the GlobalTNA Full-Stack Developer Internship Assessment. I built this job request management system to handle creating, viewing, updating, and deleting service requests. 
 
-## Tech Stack
+I've also added a few extra touches like a search feature, custom ICT categories, and a clean UI because I wanted it to feel like a real-world product.
 
-### Frontend
+## What it does
+
+- **Manage Requests:** You can create new job requests, view their details, update their information (or just their status), and delete them.
+- **Search & Filter:** Added a search bar on the home page so you can quickly find jobs by title or description. You can also filter them by specific ICT categories.
+- **Modern UI:** I used Tailwind CSS to build a clean, responsive interface with a nice blue radial gradient background.
+
+## The Tech Stack
+
+I went with a standard MERN-like stack, but swapped out React for Next.js on the frontend for better routing.
+
+**Frontend:**
 - Next.js (App Router)
 - React & TypeScript
-- Tailwind CSS (with custom blue radial gradient UI)
-- Axios & Lucide React (for icons)
+- Tailwind CSS 
+- Axios (for API calls) & Lucide React (for icons)
 
-### Backend
-- Node.js
-- Express.js
+**Backend:**
+- Node.js & Express.js
 - MongoDB & Mongoose
 - CORS & dotenv
 
----
-
-## Key Features
-
-- **Dynamic Job Board:** View, create, update status, and delete job requests.
-- **Advanced Search & Filtering:**
-  - Search by job title or description directly from the home page.
-  - Filter jobs by comprehensive ICT categories.
-  - Interactive, searchable datalist for categories including an "Other" option.
-- **Refined UI/UX:**
-  - Custom blue radial gradient background.
-  - Responsive, modern design with clear card layouts.
-  - Seamless "Back" button navigation for better user flow.
-- **REST API Integration:** Fully connected frontend and backend.
-- **Database:** MongoDB integration for robust data storage.
-
----
-
 ## Project Structure
 
-```bash
+Here is a quick look at how the project is organized:
+
+```text
 globaltna-assessment
 │
-├── backend     # Node.js/Express API
-└── frontend    # Next.js Application
+├── backend/     # Node.js and Express API server
+└── frontend/    # Next.js application (App Router)
 ```
 
 ---
 
-## Setup Instructions
+## How to run it locally
 
-### 1. Backend Setup
+The project is split into two folders: `frontend` and `backend`. You'll need two terminal windows to run them both.
 
-Navigate to the backend directory:
+### 1. Start the Backend
+
+First, open a terminal and go into the backend folder:
 ```bash
 cd backend
 ```
 
-Install dependencies:
+Install the packages:
 ```bash
 npm install
 ```
 
-Create a `.env` file in the `backend` directory and add your MongoDB connection string:
+Create a `.env` file in the `backend` folder and add your MongoDB connection string like this:
 ```env
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
 ```
 
-Run the backend server:
+Start the server:
 ```bash
 npm run dev
 ```
-*The backend will run on `http://localhost:5000`.*
+*(It should now be running on `http://localhost:5000`)*
 
-### 2. Frontend Setup
+### 2. Start the Frontend
 
-Open a new terminal and navigate to the frontend directory:
+Open your second terminal and go into the frontend folder:
 ```bash
 cd frontend
 ```
 
-Install dependencies:
+Install the packages:
 ```bash
 npm install
 ```
 
-Run the frontend application:
+Start the app:
 ```bash
 npm run dev
 ```
-*The frontend will run on `http://localhost:3000`.*
+*(The UI will be running on `http://localhost:3000`)*
 
 ---
 
-## API Endpoints
+## API Routes
 
-| Method | Endpoint | Description |
+If you want to test the backend directly (e.g., using Postman), here are the available endpoints:
+
+| Method | Endpoint | What it does |
 |---|---|---|
-| GET | `/api/jobs` | Get all jobs |
-| GET | `/api/jobs/:id` | Get single job details |
-| POST | `/api/jobs` | Create a new job request |
-| PATCH | `/api/jobs/:id` | Update job status |
-| DELETE | `/api/jobs/:id` | Delete a job request |
+| GET | `/api/jobs` | Fetches all job requests |
+| GET | `/api/jobs/:id` | Fetches details for a single job |
+| POST | `/api/jobs` | Creates a new job request |
+| PATCH | `/api/jobs/:id` | Updates a job (details or just status) |
+| DELETE | `/api/jobs/:id` | Deletes a job request |
 
 ---
 
-## Author
+## About Me
 
-P.A.A.P.G.S.Dilrukshi  
+**P.A.A.P.G.S.Dilrukshi**  
 University of Ruhuna  
 Bachelor of ICT (Hons)  
 Sri Lanka

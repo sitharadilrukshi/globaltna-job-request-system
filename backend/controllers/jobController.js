@@ -76,10 +76,10 @@ const createJob = async (req, res, next) => {
   }
 };
 
-// UPDATE status
-const updateJobStatus = async (req, res, next) => {
+// UPDATE job
+const updateJob = async (req, res, next) => {
   try {
-    const { status } = req.body;
+    const { title, description, category, location, contactName, contactEmail, status } = req.body;
 
     const job = await JobRequest.findById(req.params.id);
 
@@ -88,7 +88,13 @@ const updateJobStatus = async (req, res, next) => {
       throw new Error("Job not found");
     }
 
-    job.status = status || job.status;
+    if (title) job.title = title;
+    if (description) job.description = description;
+    if (category) job.category = category;
+    if (location !== undefined) job.location = location;
+    if (contactName !== undefined) job.contactName = contactName;
+    if (contactEmail !== undefined) job.contactEmail = contactEmail;
+    if (status) job.status = status;
 
     const updatedJob = await job.save();
 
@@ -120,6 +126,6 @@ module.exports = {
   getJobs,
   getJobById,
   createJob,
-  updateJobStatus,
+  updateJob,
   deleteJob,
 };
